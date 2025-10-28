@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:mr_ui/style/app_style.dart';
+import 'package:mr_ui/style/color_text_style.dart';
 
-class History extends StatelessWidget {
+class MyCard extends StatelessWidget {
   final String time;
   final String day;
   final Color color;
 
-  const History({
+  const MyCard({
     super.key,
     required this.color,
     required this.day,
@@ -16,8 +16,8 @@ class History extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 85,
-      width: 85,
+      height: 90,
+      width: 90,
       margin: const EdgeInsets.symmetric(horizontal: 10),
       decoration: BoxDecoration(
         color: color,
@@ -32,7 +32,11 @@ class History extends StatelessWidget {
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [Text(time, style: Style.headLineStyle3.copyWith(color: whiteColor)), SizedBox(height: 2), Text(day, style: Style.headLineStyle1.copyWith(color: whiteColor),)],
+        children: [
+          Text(time, style: Style.h2.copyWith(color: whiteColor)),
+          SizedBox(height: 2),
+          Text(day, style: Style.h5.copyWith(color: whiteColor)),
+        ],
       ),
     );
   }

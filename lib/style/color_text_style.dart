@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-
-
-
-
 Color yellowColor = HexColor("#f7ad19");
 Color greenColor = HexColor("#2ea96d");
 Color blueGreyColor = HexColor("#429ebd");
@@ -19,10 +15,10 @@ Color grey300 = const Color(0xFFE0E0E0);
 Color greyColor = Colors.grey;
 
 class Style{
-  static TextStyle headLineStyle1 = TextStyle(fontSize: 15,color: blackColor,fontWeight: FontWeight.w500);
-  static TextStyle headLineStyle2 = TextStyle(fontSize: 18,color: blackColor);
-  static TextStyle headLineStyle3 = TextStyle(fontSize: 18,color: blackColor,fontWeight: FontWeight.bold);
-  static TextStyle headLineStyle4 = TextStyle(fontSize: 20, color: blackColor, fontWeight: FontWeight.w500);
-  static TextStyle headLineStyle5 = TextStyle(fontSize: 22, color: blackColor, fontWeight: FontWeight.w500);
 
+  static TextStyle h1 = TextStyle(fontSize: 26, fontWeight: FontWeight.bold, color: blackColor);
+  static TextStyle h2 = TextStyle(fontSize: 22, fontWeight: FontWeight.w900, color: blackColor);
+  static TextStyle h3 = TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: blackColor);
+  static TextStyle h4 = TextStyle(fontSize: 18, fontWeight: FontWeight.w500, color: blackColor);
+  static TextStyle h5 = TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: blackColor);
 }

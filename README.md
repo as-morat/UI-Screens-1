@@ -1,17 +1,46 @@
-# mr_ui
+# UI-Screens-1
 
-A new Flutter project.
+A Flutter UI exploration project featuring modern layout compositions and design experiments.  
+This project demonstrates clean UI structure, component organization, and visual consistency.
+
+---
+
+## Screenshots
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="img.png" alt="Screenshot 1" width="250"/>
+    </td>
+    <td align="center">
+      <img src="img_1.png" alt="Screenshot 2" width="250"/>
+    </td>
+    <td align="center">
+      <img src="img_2.png" alt="Screenshot 3" width="250"/>
+    </td>
+  </tr>
+</table>
+
+---
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project serves as a starting point for building Flutter applications with a focus on UI design.  
+If you’re new to Flutter, begin with these resources:
 
-A few resources to get you started if this is your first Flutter project:
+- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Flutter Cookbook](https://docs.flutter.dev/cookbook)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+For in-depth documentation, visit the [official Flutter docs](https://docs.flutter.dev/).
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# UI-Screens-1
+---
+
+### Setup
+
+To run this project locally:
+
+```bash
+git clone https://github.com/<your-username>/UI-Screens-1.git
+cd UI-Screens-1
+flutter pub get
+flutter run

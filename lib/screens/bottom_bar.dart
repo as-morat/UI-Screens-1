@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mr_ui/screen/home.dart';
-import 'package:mr_ui/screen/notification.dart';
-import 'package:mr_ui/screen/profile.dart';
-import 'package:mr_ui/style/app_style.dart';
+import 'package:mr_ui/screens/about/about.dart';
+import 'package:mr_ui/screens/person/person.dart';
+import 'package:mr_ui/screens/home/home.dart';
+import 'package:mr_ui/style/color_text_style.dart';
 
 class BottomBarScreen extends StatefulWidget {
   const BottomBarScreen({super.key});
@@ -15,15 +15,21 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
   int pageIndex = 0;
 
   static final List page = [
-    const ProfileScreen(),
-    const NotificationScreen(),
     const HomeScreen(),
+    const ProfileScreen(),
+    const AboutScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: page[pageIndex],
+      backgroundColor: grey100,
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          child: page[pageIndex],
+        ),
+      ),
       bottomNavigationBar: Container(
         margin: const EdgeInsets.only(bottom: 25, left: 25, right: 25),
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
@@ -63,7 +69,9 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
         curve: Curves.easeInOut,
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
-          color: isSelected ? blueGreyColor.withValues(alpha: 0.15) : Colors.transparent,
+          color: isSelected
+              ? blueGreyColor.withValues(alpha: 0.15)
+              : Colors.transparent,
           borderRadius: BorderRadius.circular(15),
         ),
         child: Icon(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:mr_ui/screen/bottom_bar.dart';
+import 'package:mr_ui/screens/bottom_bar.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
