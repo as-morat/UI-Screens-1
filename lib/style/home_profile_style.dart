@@ -37,7 +37,7 @@ class Profile extends StatelessWidget {
                 ),
                 const Spacer(),
                 Text(
-                  "Lorem",
+                  "Name",
                   textAlign: TextAlign.end,
                   style: Style.headLineStyle5.copyWith(
                     fontSize: 30,
@@ -46,7 +46,7 @@ class Profile extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "Lorem ipsum dolor\nsit amet,consectetur",
+                  "Short description portfolio\nabout user.",
                   textAlign: TextAlign.end,
                   style: Style.headLineStyle2.copyWith(
                     fontWeight: FontWeight.w400,

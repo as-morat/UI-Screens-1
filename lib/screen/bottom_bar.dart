@@ -15,9 +15,9 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
   int pageIndex = 0;
 
   static final List page = [
-    const HomeScreen(),
-    const NotificationScreen(),
     const ProfileScreen(),
+    const NotificationScreen(),
+    const HomeScreen(),
   ];
 
   @override
@@ -42,8 +42,8 @@ class _BottomBarScreenState extends State<BottomBarScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             _buildNavIcon(Icons.home_filled, 0),
-            _buildNavIcon(Icons.notifications_active_rounded, 1),
-            _buildNavIcon(Icons.settings, 2),
+            _buildNavIcon(Icons.person, 1),
+            _buildNavIcon(Icons.info, 2),
           ],
         ),
       ),

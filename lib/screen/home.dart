@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mr_ui/style/app_style.dart';
-import 'package:mr_ui/style/profile_style.dart';
+import 'package:mr_ui/style/home_profile_style.dart';
 import 'package:mr_ui/style/style_card.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -14,7 +14,6 @@ class HomeScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Profile(),
               const SizedBox(height: 20),
@@ -25,14 +24,15 @@ class HomeScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Text(
-                      "Lorem ipsum",
+                      "About me",
                       style: Style.headLineStyle5.copyWith(
                         fontWeight: FontWeight.bold,
                         fontSize: 28,
                       ),
                     ),
+                    SizedBox(height: 5,),
                     Text(
-                      "Lorem ipsum",
+                      "Knowledge, Skills, Works",
                       style: Style.headLineStyle5.copyWith(
                         fontWeight: FontWeight.w400,
                         fontSize: 18,
@@ -44,6 +44,8 @@ class HomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 30),
               StyleCard(
+                title: "Skills",
+                description: "UI/UX design, App Development, AI Integration",
                 boxColor: yellowColor,
                 child: Container(
                   height: 35,
@@ -63,6 +65,8 @@ class HomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               StyleCard(
+                title: "Programing Knowledge",
+                  description: "C, Python, Java, Dart, Kotlin, Flutter",
                   boxColor: greenColor,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -87,26 +91,23 @@ class HomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               StyleCard(
+                  title: "Works",
+                  description: "To-do App, Quiz0 App, Mr.UI, Straw Hats",
                   boxColor: blueGreyColor,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 35,
-                        width: 55,
-                        decoration: BoxDecoration(
-                          color: whiteColor,
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: const Center(
-                          child: Icon(
-                            Icons.change_history_outlined,
-                            color: Colors.blueGrey,
-                            size: 20,
-                          ),
-                        ),
+                  child: Container(
+                    height: 35,
+                    width: 55,
+                    decoration: BoxDecoration(
+                      color: whiteColor,
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: const Center(
+                      child: Icon(
+                        Icons.change_history_outlined,
+                        color: Colors.blueGrey,
+                        size: 20,
                       ),
-                    ],
+                    ),
                   )
               )
             ],

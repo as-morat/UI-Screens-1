@@ -6,8 +6,10 @@ class StyleCard extends StatelessWidget {
 
   final Color boxColor;
   final dynamic child;
+  final String title;
+  final String description;
 
-  const StyleCard({super.key, required this.boxColor, required this.child});
+  const StyleCard({super.key, required this.boxColor, required this.child, required this.title, required this.description});
 
   @override
   Widget build(BuildContext context) {
@@ -53,16 +55,17 @@ class StyleCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Lorem ipsum",
-                  style: Style.headLineStyle3.copyWith(
-                    fontWeight: FontWeight.w500,
+                  title,
+                  style: Style.headLineStyle4.copyWith(
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  "Lorem ipsum dolor sit amet",
-                  style: Style.headLineStyle4.copyWith(
+                  description,
+                  style: Style.headLineStyle3.copyWith(
                     color: greyColor,
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
               ],
