@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mr_ui/screens/home/my_card.dart';
 import 'package:mr_ui/style/app_bar_container_style.dart';
 import 'package:mr_ui/style/color_text_style.dart';
 
@@ -27,46 +26,81 @@ class HomeScreen extends StatelessWidget {
           children: [
             Column(
               children: [
-                MyCard(
-                  y: 40,
-                  color: orangeColor.withValues(alpha: .8),
-                  title: "Projects",
-                  body: "To-Do App, Quiz0, Mr.UI, Straw Hats",
-                  end: "Ongoing",
+                _myCard(
+                  40,
+                  orangeColor.withValues(alpha: .8),
+                  "Projects",
+                  "To-Do App, Quiz0, Mr.UI, Straw Hats",
+                  "Ongoing",
                 ),
                 const SizedBox(height: 20),
-                MyCard(
-                  y: 40,
-                  color: whiteColor,
-                  title: "Learning",
-                  body: "Kotlin, Jetpack Compose, Flutter",
-                  end: "Progressing",
+                _myCard(
+                  40,
+                  whiteColor,
+                  "Learning",
+                  "Kotlin, Jetpack Compose, Flutter",
+                  "Progressing",
                 ),
               ],
             ),
             const SizedBox(width: 20),
             Column(
               children: [
-                MyCard(
-                  y: -5,
-                  color: whiteColor,
-                  title: "Goals",
-                  body: "Become full-stack Android dev",
-                  end: "Pending",
+                _myCard(
+                  -5,
+                  whiteColor,
+                  "Goals",
+                  "Become full-stack Android dev",
+                  "Pending",
                 ),
                 const SizedBox(height: 20),
-                MyCard(
-                  y: -5,
-                  color: orangeColor.withValues(alpha: .8),
-                  title: "AI",
-                  body: "Exploring ML, ChatGPT API, Smart Apps",
-                  end: "Learning",
+                _myCard(
+                  -5,
+                  orangeColor.withValues(alpha: .8),
+                  "AI",
+                  "Exploring ML, ChatGPT API, Smart Apps",
+                  "Learning",
                 ),
               ],
             ),
           ],
         ),
       ],
+    );
+  }
+
+  Widget _myCard(double y, Color color, String title, String body, String end){
+
+    final bool isDark = color.computeLuminance() < 0.5;
+    final textColor = isDark ? Colors.white : Colors.black87;
+
+    return Transform.translate(
+      offset: Offset(0, y),
+      child: Container(
+        height: 200,
+        width: 160,
+        decoration: BoxDecoration(
+          color: color,
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withValues(alpha: 0.15),
+              blurRadius: 10,
+              offset: const Offset(0, 4),
+            ),
+          ],
+        ),
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(title, style: Style.h1.copyWith(color: textColor)),
+            Text(body, style: Style.h3.copyWith(color: textColor.withValues(alpha: 0.9),)),
+            Align(alignment: Alignment.bottomRight, child: Text(end, style: Style.h5.copyWith(color: textColor.withValues(alpha: 0.8),),),),
+          ],
+        ),
+      ),
     );
   }
 }

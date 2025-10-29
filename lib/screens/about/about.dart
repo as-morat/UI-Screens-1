@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mr_ui/screens/about/my_container.dart';
 import 'package:mr_ui/style/color_text_style.dart';
 import 'package:mr_ui/style/details_card_style.dart';
 
@@ -43,26 +42,34 @@ class AboutScreen extends StatelessWidget {
           title: "Skills",
           description: "UI/UX design, App Development, AI Integration",
           boxColor: yellowColor,
-          child: MyContainer(icon: Icons.circle_outlined, color: yellowColor),
+          child: _myContainer(Icons.circle_outlined, yellowColor),
         ),
         const SizedBox(height: 20),
         StyleCard(
           title: "Programing Knowledge",
           description: "C, Python, Java, Dart, Kotlin, Flutter",
           boxColor: greenColor,
-          child: MyContainer(icon: Icons.square_outlined, color: greenColor),
+          child: _myContainer(Icons.square_outlined, greenColor),
         ),
         const SizedBox(height: 20),
         StyleCard(
           title: "Works",
           description: "To-do App, Quiz0 App, Mr.UI, Straw Hats",
           boxColor: blueGreyColor,
-          child: MyContainer(
-            icon: Icons.change_history_outlined,
-            color: blueGreyColor,
+          child: _myContainer(Icons.change_history_outlined,blueGreyColor,
           ),
         ),
       ],
+    );
+  }
+
+  Widget _myContainer(IconData icon, Color color){
+    return Container(
+        height: 50,
+        width: 50,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(color: whiteColor, borderRadius: BorderRadius.circular(8),),
+        child: Center(child: Icon(icon, color: color, size: 32,),)
     );
   }
 }
